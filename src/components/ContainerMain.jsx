@@ -1,6 +1,6 @@
 import React from 'react';
-import ContainerDay from './ContainerDay';
 import Navbar from './Navbar';
+import ContainerDay from './ContainerDay';
 
 function ContainerMain() {
   return (

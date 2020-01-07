@@ -3,45 +3,57 @@ import Styled from "styled-components";
 
 const Nav = Styled.div`
   top: 0;
-  /* margin: 0px; */
+  z-index: 1;
   width: 800px;
   position: fixed;
+  margin-left: -60px;
   background-color: white;
 `;
 
 const MenuBar = Styled.div`
-  align-items: center;
   display: flex;
-  /* border: solid 1px black; */
-
-  padding: 10px;
+  align-items: center;
+  padding: 10px, 10px, 10px, 10px;
 `;
 
-
-// const BottomLinear = Styled.hr`
-//   border: 0;
-//   height: 1px;
-//   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(220, 220, 220, 1), rgba(0, 0, 0, 0));
-// `;
+const BottomLinear = Styled.div`
+  height: 1px;
+  background: linear-gradient(to right, rgba(220, 220, 220, .20), rgba(220, 220, 220, 1), rgba(220, 220, 220, .20));
+`;
 
 const Div = Styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   padding: 0px 10px;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+const Label = Styled.label`
+  width: 60px;
+  margin-top: 50px;
+  vertical-align: bottom;
+  border-right: 1px solid gainsboro;
+`;
+
+const Number = Styled.span`
+  font-size: 30px;
+  text-align: center;
 `;
 
 function Navbar() {
   return (
     <Nav>
       <MenuBar>
-        <Div>GMT-06</Div>
-        
-        <Div>Mie <br/> 8</Div>
-                
+        <Div>
+          <Label>GMT-06</Label>
+        </Div>
+        <Div>
+          <span>MIÉ</span>
+          <br/>
+          <Number>8</Number>
+        </Div>
       </MenuBar>
-      {/* <BottomLinear /> */}
+      <BottomLinear />
     </Nav>
   );
 }
