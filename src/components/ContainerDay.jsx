@@ -23,7 +23,9 @@ const Label = Styled.label`
 const Meeting = Styled.div`
   color: white;
   width: 690px;
+  margin-top: -10px;
   border-radius: 5px;
+  position: absolute;
   background: #009ce0;
   border: 1px solid #009ce0;
   &:hover {
